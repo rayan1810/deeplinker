@@ -1,4 +1,7 @@
 {
+  "buildCommand": "pnpm --filter web build",
+  "installCommand": "pnpm install",
+  "framework": "nextjs",
   "headers": [
     {
       "source": "/.well-known/apple-app-site-association",

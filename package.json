@@ -14,7 +14,8 @@
     "db:generate": "pnpm --filter web prisma generate",
     "db:migrate": "pnpm --filter web prisma migrate dev",
     "db:deploy": "pnpm --filter web prisma migrate deploy",
-    "db:studio": "pnpm --filter web prisma studio"
+    "db:studio": "pnpm --filter web prisma studio",
+    "postinstall": "pnpm --filter web prisma generate"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
