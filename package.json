@@ -1,0 +1,30 @@
+{
+  "name": "deeplinker",
+  "version": "1.0.0",
+  "description": "Production-deployable deep-linking service",
+  "private": true,
+  "packageManager": "pnpm@10.8.1",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "seed": "tsx scripts/seed.ts",
+    "add:link": "tsx scripts/add-link.ts",
+    "db:generate": "pnpm --filter web prisma generate",
+    "db:migrate": "pnpm --filter web prisma migrate dev",
+    "db:deploy": "pnpm --filter web prisma migrate deploy",
+    "db:studio": "pnpm --filter web prisma studio"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "prettier": "^3.0.0",
+    "turbo": "^1.10.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
