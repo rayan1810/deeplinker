@@ -98,6 +98,11 @@ async function main() {
     console.log("  GET /d/hello (shorter URL)");
     console.log("  GET /l/hello?platform=ios");
     console.log("  GET /l/hello?source=email&utm_campaign=welcome");
+    console.log("\nSmart Workflow Test:");
+    console.log("  GET /l/hello?access_code=1234");
+    console.log("  GET /l/welcome?access_code=5678");
+    console.log("\nPost-Installation:");
+    console.log("  GET /post-install");
   } catch (error) {
     console.error("❌ Error seeding database:", error);
     process.exit(1);
